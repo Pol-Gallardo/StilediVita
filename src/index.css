@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@800&family=Poppins:wght@300&family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Noto+Sans:wght@800&family=Poppins:wght@300&family=Ubuntu:wght@300&display=swap');
+
 
 * {
   margin: 0;
@@ -10,15 +12,16 @@
   --clr-white: #FFFFFF;
   --clr-black: #000000;
   --clr-grey: #707070;
-  --clr-bunker: #131921;
+  --clr-bunker: #b8f7ff;
   --clr-ebony-clay: #232f3e;
-  --clr-orange: #FF9900;
+  --clr-blue: #3b10d9;
   --clr-orange-dark: #cc8111;
+  --clr_blue-light: #c9d9f1;
 }
 
 body {
   margin: 0;
-  font-family: "Open Sans";
+  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -39,10 +42,10 @@ h2:not(.product__overview h2) {
 
 nav {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
 
-  background-color: var(--clr-bunker);
+  background-color: var(--clr-white);
 }
 
 .nav__brand {
@@ -57,8 +60,8 @@ nav {
 }
 
 .nav__brand h1 {
-  color: var(--clr-white);
-  font-family: "Lalezar";
+  color: var(--clr-black);
+  font-family: 'Ubuntu', sans-serif;
   font-size: 2.5em;
 }
 
@@ -90,26 +93,27 @@ nav {
 
 .nav__search {
   padding: 10px;
-  border-radius: 6px;
+  border-radius: 15px;
   min-width: 50%;
+  background-color: rgb(209, 250, 251);
 }
 
 .nav__search:hover {
-  outline: 1px solid var(--clr-orange);
+  outline: 1px solid var(--clr-blue);
 }
 
 .nav__connect {
   width: 150px;
   height: 40px;
-  margin: 0 auto;
+  margin: 0.5rem ;
 
-  background-color: var(--clr-orange);
+  background-color: var(--clr_blue-light);
   color: var(--clr-black);
 
   border: none;
-  border-radius: 4px;
+  border-radius: 20px;
 
-  font-family: "Lalezar";
+  font-family: 'Ubuntu', sans-serif;
   font-size: 1.25em;
   font-weight: 600;
 
@@ -118,7 +122,7 @@ nav {
 }
 
 .nav__connect:hover {
-  background-color: var(--clr-orange-dark);
+  background-color: var(--clr-blue);
 }
 
 /* ------------------------------------------------------ */
@@ -181,7 +185,7 @@ nav {
 }
 
 .card__info h4 {
-  font-family: "Open Sans";
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.25em;
   font-weight: 400;
 }
@@ -192,7 +196,7 @@ nav {
 }
 
 .card__info p {
-  font-family: "Open Sans";
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.95em;
   font-weight: 600;
   margin-top: 5px;
@@ -292,13 +296,13 @@ nav {
   height: 40px;
   margin: 20px 0;
 
-  background-color: var(--clr-orange);
+  background-color: var(--clr_blue-light);
   color: var(--clr-black);
 
   border: none;
   border-radius: 24px;
 
-  font-family: "Open Sans";
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.95em;
   font-weight: 600;
 
@@ -307,7 +311,7 @@ nav {
 }
 
 .product__buy:hover {
-  background-color: var(--clr-orange-dark);
+  background-color: var(--clr-blue);
 }
 
 .product__bought {

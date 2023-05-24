@@ -2,84 +2,93 @@
   "items": [
     {
       "id": 1,
-      "name": "Camera",
+      "name": "Richard Mille RM 011",
       "category": "electronics",
-      "image": "https://ipfs.io/ipfs/QmTYEboq8raiBs7GTUg2yLXB3PMz6HuBNgNfSZBx5Msztg/camera.jpg",
-      "price": "1",
+      "image": "https://gateway.pinata.cloud/ipfs/QmQgw7M6pwtkYNgukB9rFjECcCFhHz1QvxQqAzwDvLFU7W?_gl=1*1hyrt0z*rs_ga*MTAzMTg5NTU5Ny4xNjg0ODU3MjY5*rs_ga_5RMPXG14TE*MTY4NDg1NzI2OS4xLjEuMTY4NDg1ODk1OS42MC4wLjA.",
+      "price": "350",
       "rating": 4,
       "stock": 10
     },
+
     {
       "id": 2,
-      "name": "Drone",
+      "name": "Patek Philippe Nautilus",
       "category": "electronics",
-      "image": "https://ipfs.io/ipfs/QmTYEboq8raiBs7GTUg2yLXB3PMz6HuBNgNfSZBx5Msztg/drone.jpg",
+      "image": "https://gateway.pinata.cloud/ipfs/QmUsH9JdkG16JJHnqSWY51JY5Uvppnkfq6hxrABAZ69u1J?_gl=1*18spujs*rs_ga*MTAzMTg5NTU5Ny4xNjg0ODU3MjY5*rs_ga_5RMPXG14TE*MTY4NDg1NzI2OS4xLjEuMTY4NDg1OTE2MS42MC4wLjA.",
       "price": "2",
       "rating": 5,
       "stock": 6
     },
+
     {
       "id": 3,
-      "name": "Headset",
+      "name": "Rolex Explorer",
       "category": "electronics",
-      "image": "https://ipfs.io/ipfs/QmTYEboq8raiBs7GTUg2yLXB3PMz6HuBNgNfSZBx5Msztg/headset.jpg",
-      "price": "0.25",
+      "image": "https://gateway.pinata.cloud/ipfs/QmNWtiU8caNrb6Yo1bB7LV8pCTzWPYLePBUL2G4CgUsomr?_gl=1*1a81fcs*rs_ga*MTAzMTg5NTU5Ny4xNjg0ODU3MjY5*rs_ga_5RMPXG14TE*MTY4NDg1NzI2OS4xLjEuMTY4NDg1OTM2My42MC4wLjA.",
+      "price": "5",
       "rating": 2,
       "stock": 24
     },
+
     {
       "id": 4,
-      "name": "Shoes",
+      "name": "Nike Air Force 1 Low",
       "category": "clothing",
-      "image": "https://ipfs.io/ipfs/QmTYEboq8raiBs7GTUg2yLXB3PMz6HuBNgNfSZBx5Msztg/shoes.jpg",
-      "price": "0.25",
+      "image": "https://gateway.pinata.cloud/ipfs/QmeaRUzPWWphvhiuhfKUYP9uFUtteqomXgXDSmtDecJCk6?_gl=1*ktf64n*rs_ga*MTAzMTg5NTU5Ny4xNjg0ODU3MjY5*rs_ga_5RMPXG14TE*MTY4NDg1NzI2OS4xLjEuMTY4NDg1NzcxNS42MC4wLjA.",
+      "price": "23",
       "rating": 5,
       "stock": 3
     },
+
     {
       "id": 5,
-      "name": "Sunglasses",
+      "name": "Kith Moncler Rochebrune Classic Down Jacket",
       "category": "clothing",
-      "image": "https://ipfs.io/ipfs/QmTYEboq8raiBs7GTUg2yLXB3PMz6HuBNgNfSZBx5Msztg/sunglasses.jpg",
-      "price": "0.10",
+      "image": "https://gateway.pinata.cloud/ipfs/QmfBkSD1UWRgvE2f7RqYcMPhdqYDX9qJEtfpEE3DKd5wwJ?_gl=1*eib7f0*rs_ga*MTAzMTg5NTU5Ny4xNjg0ODU3MjY5*rs_ga_5RMPXG14TE*MTY4NDg1NzI2OS4xLjEuMTY4NDg1ODQ4My4yNy4wLjA.",
+      "price": "2",
       "rating": 4,
       "stock": 12
     },
+
     {
       "id": 6,
-      "name": "Watch",
+      "name": "Dior B23 High",
       "category": "clothing",
-      "image": "https://ipfs.io/ipfs/QmTYEboq8raiBs7GTUg2yLXB3PMz6HuBNgNfSZBx5Msztg/watch.jpg",
+      "image": "https://gateway.pinata.cloud/ipfs/Qmdnm9KuroDK1N4aJshozrV8P35MqzYFREYGFqLz92qgLt?_gl=1*1qn0cma*rs_ga*MTAzMTg5NTU5Ny4xNjg0ODU3MjY5*rs_ga_5RMPXG14TE*MTY4NDg1NzI2OS4xLjEuMTY4NDg1ODQ4My4yNy4wLjA.",
       "price": "1.25",
       "rating": 4,
       "stock": 0
     },
+
     {
       "id": 7,
-      "name": "Puzzle Cube",
+      "name": "Hermès Kelly 25",
       "category": "toys",
-      "image": "https://ipfs.io/ipfs/QmTYEboq8raiBs7GTUg2yLXB3PMz6HuBNgNfSZBx5Msztg/cube.jpg",
-      "price": "0.05",
+      "image": "https://gateway.pinata.cloud/ipfs/QmP7XmM4b2QEBfAEi9f4pU8heBdpiq4vejTYZ8GMKkTe8C?_gl=1*xftozk*rs_ga*MTAzMTg5NTU5Ny4xNjg0ODU3MjY5*rs_ga_5RMPXG14TE*MTY4NDg2MzI5NC4yLjAuMTY4NDg2MzI5NC42MC4wLjA.",
+      "price": "2",
       "rating": 4,
       "stock": 15
     },
+
     {
       "id": 8,
-      "name": "Train Set",
+      "name": "Saint Laurent Envelope",
       "category": "toys",
-      "image": "https://ipfs.io/ipfs/QmTYEboq8raiBs7GTUg2yLXB3PMz6HuBNgNfSZBx5Msztg/train.jpg",
-      "price": "0.20",
+      "image": "https://gateway.pinata.cloud/ipfs/QmX9kG8dPWq2sSWyBWaUuChL3Ec2NN7PnchM9ihKsEDwvF?_gl=1*s67r59*rs_ga*MTAzMTg5NTU5Ny4xNjg0ODU3MjY5*rs_ga_5RMPXG14TE*MTY4NDg2MzI5NC4yLjEuMTY4NDg2NDgwNS42MC4wLjA.",
+      "price": "0.8",
       "rating": 4,
       "stock": 0
     },
+
     {
       "id": 9,
-      "name": "Robot Set",
+      "name": "Gucci Bandolera Jackie 1961",
       "category": "toys",
-      "image": "https://ipfs.io/ipfs/QmTYEboq8raiBs7GTUg2yLXB3PMz6HuBNgNfSZBx5Msztg/robots.jpg",
-      "price": "0.15",
+      "image": "https://gateway.pinata.cloud/ipfs/QmQ3wuR4R9AsHZtM6vAPgS7hSUTQgAhpnmeYzGTDXEyeM1?_gl=1*p4e106*rs_ga*MTAzMTg5NTU5Ny4xNjg0ODU3MjY5*rs_ga_5RMPXG14TE*MTY4NDg2MzI5NC4yLjEuMTY4NDg2NDQ3NS42MC4wLjA.",
+      "price": "1.15",
       "rating": 3,
       "stock": 12
     }
+
   ]
 }
