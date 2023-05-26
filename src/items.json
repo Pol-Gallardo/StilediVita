@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Richard Mille RM 011",
-      "category": "electronics",
+      "category": "relojes",
       "description": "El Richard Mille RM 011 es un reloj de lujo de alta gama conocido por su diseño distintivo y su ingeniería avanzada. Es parte de la colección RM de la marca suiza Richard Mille, que se caracteriza por su enfoque en la innovación técnica y el uso de materiales de vanguardia.",
       "image": "https://gateway.pinata.cloud/ipfs/QmQgw7M6pwtkYNgukB9rFjECcCFhHz1QvxQqAzwDvLFU7W?_gl=1*1hyrt0z*rs_ga*MTAzMTg5NTU5Ny4xNjg0ODU3MjY5*rs_ga_5RMPXG14TE*MTY4NDg1NzI2OS4xLjEuMTY4NDg1ODk1OS42MC4wLjA.",
       "price": "0.03",
@@ -14,7 +14,7 @@
     {
       "id": 2,
       "name": "Patek Philippe Nautilus",
-      "category": "electronics",
+      "category": "relojes",
       "description": "El Patek Philippe Nautilus es un icónico reloj de pulsera que ha logrado un estatus legendario en el mundo de la relojería de lujo. Introducido por primera vez en 1976, el Nautilus se ha convertido en uno de los modelos más reconocidos y deseados de la marca suiza Patek Philippe.",
       "image": "https://gateway.pinata.cloud/ipfs/QmUsH9JdkG16JJHnqSWY51JY5Uvppnkfq6hxrABAZ69u1J?_gl=1*18spujs*rs_ga*MTAzMTg5NTU5Ny4xNjg0ODU3MjY5*rs_ga_5RMPXG14TE*MTY4NDg1NzI2OS4xLjEuMTY4NDg1OTE2MS42MC4wLjA.",
       "price": "0.02",
@@ -25,7 +25,7 @@
     {
       "id": 3,
       "name": "Rolex Explorer",
-      "category": "electronics",
+      "category": "relojes",
       "description": "El Rolex Explorer es un reloj icónico y reconocible al instante en la colección de Rolex. Es conocido por su robustez, precisión y su capacidad para resistir condiciones extremas. El Explorer se ha convertido en un símbolo de aventura y exploración, inspirado en las expediciones a las montañas y a los lugares más remotos del mundo.",
       "image": "https://gateway.pinata.cloud/ipfs/QmNWtiU8caNrb6Yo1bB7LV8pCTzWPYLePBUL2G4CgUsomr?_gl=1*1a81fcs*rs_ga*MTAzMTg5NTU5Ny4xNjg0ODU3MjY5*rs_ga_5RMPXG14TE*MTY4NDg1NzI2OS4xLjEuMTY4NDg1OTM2My42MC4wLjA.",
       "price": "0.05",
@@ -69,7 +69,7 @@
     {
       "id": 7,
       "name": "Hermès Kelly 25",
-      "category": "toys",
+      "category": "bolsos",
       "description": "El Hermès Kelly 25 es un icónico bolso de lujo diseñado por la casa de moda francesa Hermès. Nombrado en honor a la actriz y princesa de Mónaco, Grace Kelly, este bolso ha ganado fama y reconocimiento en el mundo de la moda como un símbolo de elegancia y sofisticación.",
       "image": "https://gateway.pinata.cloud/ipfs/QmP7XmM4b2QEBfAEi9f4pU8heBdpiq4vejTYZ8GMKkTe8C?_gl=1*xftozk*rs_ga*MTAzMTg5NTU5Ny4xNjg0ODU3MjY5*rs_ga_5RMPXG14TE*MTY4NDg2MzI5NC4yLjAuMTY4NDg2MzI5NC42MC4wLjA.",
       "price": "0.10",
@@ -80,7 +80,7 @@
     {
       "id": 8,
       "name": "Saint Laurent Envelope",
-      "category": "toys",
+      "category": "bolsos",
       "description": "El Saint Laurent Envelope es un elegante bolso de mano que forma parte de la colección de accesorios de la reconocida marca de moda francesa Saint Laurent. Con un diseño sofisticado y atemporal, este bolso es apreciado por su estilo minimalista y su artesanía de alta calidad.",
       "image": "https://gateway.pinata.cloud/ipfs/QmX9kG8dPWq2sSWyBWaUuChL3Ec2NN7PnchM9ihKsEDwvF?_gl=1*s67r59*rs_ga*MTAzMTg5NTU5Ny4xNjg0ODU3MjY5*rs_ga_5RMPXG14TE*MTY4NDg2MzI5NC4yLjEuMTY4NDg2NDgwNS42MC4wLjA.",
       "price": "0.3",
@@ -91,7 +91,7 @@
     {
       "id": 9,
       "name": "Gucci Bandolera Jackie 1961",
-      "category": "toys",
+      "category": "bolsos",
       "description": "La Gucci Bandolera Jackie 1961 es un bolso de hombro emblemático de la marca italiana Gucci, que rinde homenaje al icónico diseño original del bolso Jackie lanzado en la década de 1960. Esta reinterpretación moderna conserva el encanto vintage y el estilo distintivo que lo convierten en una pieza codiciada.",
       "image": "https://gateway.pinata.cloud/ipfs/QmQ3wuR4R9AsHZtM6vAPgS7hSUTQgAhpnmeYzGTDXEyeM1?_gl=1*p4e106*rs_ga*MTAzMTg5NTU5Ny4xNjg0ODU3MjY5*rs_ga_5RMPXG14TE*MTY4NDg2MzI5NC4yLjEuMTY4NDg2NDQ3NS42MC4wLjA.",
       "price": "0.2",

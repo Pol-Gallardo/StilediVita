@@ -13,22 +13,22 @@ const COST = tokens(1)
 const RATING = 4
 const STOCK = 5
 
-describe("Dappazon", () => {
-  let dappazon
+describe("Stile", () => {
+  let stile
   let deployer, buyer
 
   beforeEach(async () => { 
     [deployer, buyer] = await ethers.getSigners()
     
-    const Dappazon = await ethers.getContractFactory("Dappazon")
-    dappazon = await Dappazon.deploy()
+    const Stile = await ethers.getContractFactory("Stile")
+    stile = await Stile.deploy()
 
   })
 
   
   describe("Deployment", () => { 
     it("Sets the owner", async () => {
-      expect(await dappazon.owner()).to.equal(deployer.address)
+      expect(await stile.owner()).to.equal(deployer.address)
     })
 
   })
@@ -37,7 +37,7 @@ describe("Dappazon", () => {
     let transaction
 
     beforeEach(async () => { 
-      transaction = await dappazon.connect(deployer).list(
+      transaction = await stile.connect(deployer).list(
         ID,
         NAME,
         CATEGORY,
@@ -51,7 +51,7 @@ describe("Dappazon", () => {
       await transaction.wait()
     })
     it("Returns item attributes", async () => {
-      const item = await dappazon.items(ID)
+      const item = await stile.items(ID)
       expect(item.id).to.equal(ID)
       expect(item.name).to.equal(NAME)
       expect(item.category).to.equal(CATEGORY)
@@ -62,7 +62,7 @@ describe("Dappazon", () => {
       expect(item.stock).to.equal(STOCK)
     })
     it("Emits List event", () => { 
-      expect(transaction).to.emit(dappazon, "List")
+      expect(transaction).to.emit(stile, "List")
     })
   })
 
@@ -72,33 +72,33 @@ describe("Buying", () => {
 
   beforeEach(async () => { 
     //List an item
-    transaction = await dappazon.connect(deployer).list(ID, NAME, CATEGORY, DESCRIPTION, IMAGE, COST, RATING, STOCK)
+    transaction = await stile.connect(deployer).list(ID, NAME, CATEGORY, DESCRIPTION, IMAGE, COST, RATING, STOCK)
     await transaction.wait()
 
     // Buy an item
-    transaction = await dappazon.connect(buyer).buy(ID, { value: COST })
+    transaction = await stile.connect(buyer).buy(ID, { value: COST })
     await transaction.wait()
   })
 
   it("Updates buyer's order count", async () => {
-    const result = await dappazon.orderCount(buyer.address)
+    const result = await stile.orderCount(buyer.address)
     expect(result).to.equal(1)
   })
 
   it("Adds the order", async () => {
-    const order = await dappazon.orders(buyer.address, 1)
+    const order = await stile.orders(buyer.address, 1)
 
     expect(order.time).to.be.greaterThan(0)
     expect(order.item.name).to.equal(NAME)
   })
 
   it("Updates the contract balance", async () => { 
-    const result = await ethers.provider.getBalance(dappazon.address)
+    const result = await ethers.provider.getBalance(stile.address)
     expect(result).to.equal(COST)
   })
 
   it("Emits Buy event", () => {
-    expect(transaction).to.emit(dappazon, "Buy")
+    expect(transaction).to.emit(stile, "Buy")
   
   })
 
@@ -110,18 +110,18 @@ describe("Wihdrawing", () => {
 
   beforeEach(async () => {
     // List a item
-    let transaction = await dappazon.connect(deployer).list(ID, NAME, CATEGORY, DESCRIPTION, IMAGE, COST, RATING, STOCK)
+    let transaction = await stile.connect(deployer).list(ID, NAME, CATEGORY, DESCRIPTION, IMAGE, COST, RATING, STOCK)
     await transaction.wait()
 
     // Buy an item
-    transaction = await dappazon.connect(buyer).buy(ID, { value: COST })
+    transaction = await stile.connect(buyer).buy(ID, { value: COST })
     await transaction.wait()
 
     // Get Deployer balance before
     balanceBefore = await ethers.provider.getBalance(deployer.address)
   
     // Withdraw
-    transaction = await dappazon.connect(deployer).withdraw()
+    transaction = await stile.connect(deployer).withdraw()
     await transaction.wait()
   })
 
@@ -131,7 +131,7 @@ describe("Wihdrawing", () => {
   })
 
   it('Updates the contract balance', async () => { 
-    const result = await ethers.provider.getBalance(dappazon.address)
+    const result = await ethers.provider.getBalance(stile.address)
     expect(result).to.equal(0)
   })
 

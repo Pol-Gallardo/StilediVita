@@ -7,20 +7,20 @@ import Section from './components/Section'
 import Product from './components/Product'
 
 // ABIs
-import Dappazon from './abis/Dappazon.json'
+import Stile from './abis/Stile.json'
 
 // Config
 import config from './config.json'
 
 function App() {
   const [provider, setProvider] = useState(null)
-  const [dappazon, setDappazon] = useState(null)
+  const [stile, setStile] = useState(null)
 
   const [account, setAccount] = useState(null)
 
-  const [electronics, setElectronics] = useState(null)
+  const [relojes, setRelojes] = useState(null)
   const [clothing, setClothing] = useState(null)
-  const [toys, setToys] = useState(null)
+  const [bolsos, setBolsos] = useState(null)
 
   const [item, setItem] = useState({})
   const [toggle, setToggle] = useState(false)
@@ -38,25 +38,25 @@ function App() {
     const network = await provider.getNetwork()
     console.log(network)
     // Connect to smart contracts
-    const dappazon = new ethers.Contract( 
-      config[network.chainId].dappazon.address,
-      Dappazon, 
+    const stile = new ethers.Contract( 
+      config[network.chainId].stile.address,
+      Stile, 
       provider )
-      setDappazon(dappazon)
+      setStile(stile)
     // Load products
       const items = []
 
     for (var i = 0; i < 9; i++) {
-      const item = await dappazon.items(i + 1)
+      const item = await stile.items(i + 1)
       items.push(item)
     }
-    const electronics = items.filter((item) => item.category === 'electronics')
+    const relojes = items.filter((item) => item.category === 'relojes')
     const clothing = items.filter((item) => item.category === 'clothing')
-    const toys = items.filter((item) => item.category === 'toys')
+    const bolsos = items.filter((item) => item.category === 'bolsos')
     
-    setElectronics(electronics)
+    setRelojes(relojes)
     setClothing(clothing)
-    setToys(toys)
+    setBolsos(bolsos)
   }
 
   useEffect(() => { 
@@ -69,16 +69,16 @@ function App() {
 
       <h2>Élite de Ventas</h2>
 
-      {electronics && clothing && toys && (
+      {relojes && clothing && bolsos && (
         <> 
         <Section title={"Selección de ropa"} items={clothing} togglePop={togglePop} />
-        <Section title={"Colección de relojes"} items={electronics} togglePop={togglePop} />
-        <Section title={"Colección de bolsos"} items={toys} togglePop={togglePop} />
+        <Section title={"Colección de relojes"} items={relojes} togglePop={togglePop} />
+        <Section title={"Colección de bolsos"} items={bolsos} togglePop={togglePop} />
         </>
       )}
 
       {toggle && (
-        <Product item={item} provider={provider} account={account} dappazon={dappazon} togglePop={togglePop} />
+        <Product item={item} provider={provider} account={account} stile={stile} togglePop={togglePop} />
       )}
 
     </div>

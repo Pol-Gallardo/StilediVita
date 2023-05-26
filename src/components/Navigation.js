@@ -37,9 +37,9 @@ const Navigation = ({ account, setAccount }) => {
         
 
         <ul className='nav__links'> 
-            <li><a href="#Clothing & Jewelry">Explora nuestra selección de ropa</a></li>
-            <li><a href="#Electronics & Gadgets">Sumérgete en nuestra colección de relojes</a></li>
-            <li><a href="#Toys & Gaming">Descubre nuestra colección de bolsos</a></li>
+            <li><a href="#Selección de ropa">Explora nuestra selección de ropa</a></li>
+            <li><a href="#Colección de relojes">Sumérgete en nuestra colección de relojes</a></li>
+            <li><a href="#Colección de bolsos">Descubre nuestra colección de bolsos</a></li>
         </ul>
 
         </nav>

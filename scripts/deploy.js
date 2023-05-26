@@ -15,16 +15,16 @@ async function main() {
   // Setup accounts
   const [deployer] = await ethers.getSigners()
 
-  // Deploy Dappazon
-  const Dappazon = await hre.ethers.getContractFactory("Dappazon")
-  const dappazon = await Dappazon.deploy()
-  await dappazon.deployed()
+  // Deploy Stile
+  const Stile = await hre.ethers.getContractFactory("Stile")
+  const stile = await Stile.deploy()
+  await stile.deployed()
   
-  console.log(`Deployed Dappazon Contract at:  ${dappazon.address}\n`)
+  console.log(`Deployed Stile Contract at:  ${stile.address}\n`)
 
   // Listing items..
   for (let i = 0; i < items.length; i++) {
-    const transaction = await dappazon.connect(deployer).list(
+    const transaction = await stile.connect(deployer).list(
       items[i].id,
       items[i].name,
       items[i].category,

@@ -6,26 +6,26 @@ import Rating from './Rating'
 
 import close from '../assets/close.svg'
 
-const Product = ({ item, provider, account, dappazon, togglePop }) => {
+const Product = ({ item, provider, account, stile, togglePop }) => {
   const [order, setOrder] = useState(null)
   const [hasBought, setHasBought] = useState(false)
 
   const fetchDetails = async () => {
-    const events = await dappazon.queryFilter("Buy")
+    const events = await stile.queryFilter("Buy")
     const orders = events.filter(
       (event) => event.args.buyer === account && event.args.itemId.toString() === item.id.toString()
     )
 
     if (orders.length === 0) return
 
-    const order = await dappazon.orders(account, orders[0].args.orderId)
+    const order = await stile.orders(account, orders[0].args.orderId)
     setOrder(order)
   }
 
   const buyHandler = async () => {
     const signer = await provider.getSigner()
 
-    let transaction = dappazon.connect(signer).buy(item.id, {value: item.cost})
+    let transaction = stile.connect(signer).buy(item.id, {value: item.cost})
     await transaction.wait()
 
     setHasBought(true)
@@ -54,7 +54,7 @@ const Product = ({ item, provider, account, dappazon, togglePop }) => {
 
         <hr />
 
-        <h2>Overview</h2>
+        <h2>Descripción</h2>
 
         <p>
           {item.description}
@@ -66,7 +66,7 @@ const Product = ({ item, provider, account, dappazon, togglePop }) => {
         <h1>{ethers.utils.formatUnits(item.cost.toString(), 'ether')} ETH</h1>
 
         <p>
-          FREE delivery <br />
+          Entrega Gratis <br />
           <strong>
             {new Date(Date.now() + 345600000).toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric'})}
           </strong>
