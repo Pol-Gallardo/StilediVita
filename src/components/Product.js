@@ -59,7 +59,6 @@ const Product = ({ item, provider, account, dappazon, togglePop }) => {
         <p>
           {item.description}
 
-          Las Nike Air Force 1 Low en la edición limitada 'Louis Vuitton Monogram Brown Damier Azur' son una colaboración exclusiva entre Nike y la reconocida marca de moda de lujo Louis Vuitton. Estas zapatillas combinan el diseño icónico de las Air Force 1 con los elementos distintivos de Louis Vuitton.
         </p>
 
         </div>

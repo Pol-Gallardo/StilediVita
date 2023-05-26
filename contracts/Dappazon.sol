@@ -8,6 +8,7 @@ contract Dappazon {
         uint256 id;
         string name;
         string category;
+        string description;
         string image;
         uint256 cost;
         uint256 rating;
@@ -36,10 +37,10 @@ contract Dappazon {
     }
 
     // List products
-    function list(uint256 _id, string memory _name, string memory _category, string memory _image, uint256 _cost, uint256 _rating, uint256 _stock) public onlyOwner{
+    function list(uint256 _id, string memory _name, string memory _category, string memory _description, string memory _image, uint256 _cost, uint256 _rating, uint256 _stock) public onlyOwner{
 
         //Create Item struct
-        Item memory item = Item(_id, _name, _category, _image, _cost, _rating, _stock );
+        Item memory item = Item(_id, _name, _category, _description, _image, _cost, _rating, _stock);
 
         // Save Item Struct to blockchain
         items[_id] = item;

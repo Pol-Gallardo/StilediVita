@@ -28,6 +28,7 @@ async function main() {
       items[i].id,
       items[i].name,
       items[i].category,
+      items[i].description,
       items[i].image,
       tokens(items[i].price),
       items[i].rating,

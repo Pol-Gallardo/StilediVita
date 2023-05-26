@@ -7,6 +7,7 @@ const tokens = (n) => {
 const ID = 1
 const NAME = "Shoes"
 const CATEGORY = "Clothing"
+const DESCRIPTION = "MOLA"
 const IMAGE = "https://ipfs.io/ipfs/QmTYEboq8raiBs7GTUg2yLXB3PMz6HuBNgNfSZBx5Msztg/shoes.jpg"
 const COST = tokens(1)
 const RATING = 4
@@ -40,6 +41,7 @@ describe("Dappazon", () => {
         ID,
         NAME,
         CATEGORY,
+        DESCRIPTION,
         IMAGE,
         COST,
         RATING,
@@ -53,6 +55,7 @@ describe("Dappazon", () => {
       expect(item.id).to.equal(ID)
       expect(item.name).to.equal(NAME)
       expect(item.category).to.equal(CATEGORY)
+      expect(item.description).to.equal(DESCRIPTION)
       expect(item.image).to.equal(IMAGE)
       expect(item.cost).to.equal(COST)
       expect(item.rating).to.equal(RATING)
@@ -69,7 +72,7 @@ describe("Buying", () => {
 
   beforeEach(async () => { 
     //List an item
-    transaction = await dappazon.connect(deployer).list(ID, NAME, CATEGORY, IMAGE, COST, RATING, STOCK)
+    transaction = await dappazon.connect(deployer).list(ID, NAME, CATEGORY, DESCRIPTION, IMAGE, COST, RATING, STOCK)
     await transaction.wait()
 
     // Buy an item
@@ -107,7 +110,7 @@ describe("Wihdrawing", () => {
 
   beforeEach(async () => {
     // List a item
-    let transaction = await dappazon.connect(deployer).list(ID, NAME, CATEGORY, IMAGE, COST, RATING, STOCK)
+    let transaction = await dappazon.connect(deployer).list(ID, NAME, CATEGORY, DESCRIPTION, IMAGE, COST, RATING, STOCK)
     await transaction.wait()
 
     // Buy an item
