@@ -78,15 +78,9 @@ const Product = ({ item, provider, account, stile, togglePop }) => {
           <p>Out of Stock</p>
         )}
         
-        {item.stock > 0 ? (
-          <button className='product__buy' onClick={buyHandler}>
-            Buy Now
-          </button>
-        ) : (
-          <button className='product__buy' disabled>
-            Out of Stock
-          </button>
-        )}
+        <button className='product__buy' onClick={buyHandler}>
+          Buy Now
+        </button>
 
         <p><small>Ships from</small> STILE DI VITA</p>
         <p><small>Sold by</small> STILE DI VITA</p>
