@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { ethers } from 'ethers'
 
+
 // Components
 import Navigation from './components/Navigation'
 import Section from './components/Section'
@@ -24,11 +25,16 @@ function App() {
 
   const [item, setItem] = useState({})
   const [toggle, setToggle] = useState(false)
+  const [showNotice, setShowNotice] = useState(true);
 
   const togglePop = (item) => {
     setItem(item)
     toggle ? setToggle(false) : setToggle(true)
   }
+
+  const closeNotice = () => {
+    setShowNotice(false);
+  };
 
   const loadBlockchainData = async () => {
     let provider;
@@ -97,7 +103,61 @@ function App() {
 
 
   return (
+    
     <div>
+       {showNotice && (
+        <div
+          style={{
+            position: 'fixed',
+            bottom: '10px',
+            borderRadius: '10px',
+            left: '10px',
+            width: '400px',
+            height: '130px',
+            padding: '20px',
+            backgroundColor: 'rgb(206,212,218)',
+            color: '#62686F',
+            fontSize: '16px',
+            zIndex: '9999',
+          }}
+        >
+          <p>
+            Esto es una versión de prueba, con la red Testnet Sepolia.
+          </p>
+          <p>
+            Puedes añadir monedas gratuitamente a tu billetera MetaMask desde el siguiente enlace: 
+            <a href="https://sepoliafaucet.com/" target="_blank" style={{color:'#495057'}} rel="noopener noreferrer"> https://sepoliafaucet.com/</a>
+          </p>
+          <button
+            style={{
+              position: 'absolute',
+              top: '5px',
+              right: '5px',
+              background: 'none',
+              border: 'none',
+              color: '#495057',
+              fontSize: '16px',
+              cursor: 'pointer',
+              padding: '0',
+            }}
+            onClick={closeNotice}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              fill="#495057"
+              style={{
+                verticalAlign: 'middle',
+              }}
+            >
+              <path d="M8.75 7l4.375 4.375-1.375 1.375-4.375-4.375-4.375 4.375-1.375-1.375 4.375-4.375-4.375-4.375 1.375-1.375 4.375 4.375 4.375-4.375 1.375 1.375z" />
+            </svg>
+          </button>
+        </div>
+      )}
+
       <Navigation account={account} setAccount={setAccount} />
 
       <h2>Élite de Ventas</h2>
